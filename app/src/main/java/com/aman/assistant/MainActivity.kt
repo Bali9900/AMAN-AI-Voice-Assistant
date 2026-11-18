@@ -50,7 +50,7 @@ class MainActivity : Activity(), TextToSpeech.OnInitListener {
         super.onCreate(savedInstanceState)
         window.statusBarColor = dark
         tts = TextToSpeech(this, this)
-        val scroll = ScrollView(this).apply { setBackgroundColor(Color.rgb(242,247,255)); fillViewport = true }
+        val scroll = ScrollView(this).apply { setBackgroundColor(Color.rgb(242,247,255)); isFillViewport = true }
         val root = LinearLayout(this).apply { orientation = LinearLayout.VERTICAL; setPadding(22,32,22,28) }
         scroll.addView(root)
         fun text(s:String, size:Float, bold:Boolean=false):TextView = TextView(this).apply {
